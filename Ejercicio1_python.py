@@ -25,11 +25,41 @@ else:
     elif len(str(Documento_identidad)) != 8:
         print("Usted no posee un documento de identidad válido, no puede ingresar a la web del Ministerio")
 
-    # 3. La edad se evalúa aparte porque es un requisito totalmente distinto
+    # 3. La edad se evalua aparte porque es un requisito totalmente distinto
     if edad < 18:
         print("Usted es menor de edad, no puede ingresar a la web del Ministerio")
 
-#EJERCICIO 2
+
+#Ejercicio 2: Descuento en una tienda
+#Solicite el monto de una compra.
+
+#Aplicar los siguientes descuentos:
+
+#20% si supera Gs. 500.000
+#10% si supera Gs. 200.000
+#Sin descuento en cualquier otro caso
+#Mostrar:
+
+#Monto original
+#Descuento aplicado
+#Total a pagar
+
+print("--------------Bienvenido a la tienda Humberto Rivero calculemos su descuento --------------")
+
+monto = float(input("Ingrese el monto de su compra: "))
+
+if monto > 500000:
+    descuento = monto * 0.20 
+elif monto > 200000:
+    descuento = monto * 0.10
+else:
+    print("no hay descuento aplicable para ese monto ingresado")
+
+Total_pago = monto - descuento
+
+print(f"Monto original:{(int(monto))}")
+print(f"Descuento aplicado:{(int(descuento))}")
+print(f"El total a pagar  con el descuento aplicado es:{(int(Total_pago))}")    
 
 
-#
+
